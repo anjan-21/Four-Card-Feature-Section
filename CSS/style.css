@@ -20,30 +20,30 @@ body {
 
 /* -------------------- Utility Classes Start -------------------- */
 .red {
-  border-color: hsl(0, 78%, 62%);
+  border-color: hsl(0, 78%, 62%) !important;
 }
 
 .cyan {
-  border-color: hsl(180, 62%, 55%);
+  border-color: hsl(180, 62%, 55%) !important;
 }
 
 .orange {
-  border-color: hsl(34, 97%, 64%);
+  border-color: hsl(34, 97%, 64%) !important;
 }
 
 .blue {
-  border-color: hsl(212, 86%, 64%);
+  border-color: hsl(212, 86%, 64%) !important;
 }
 /* -------------------- Utility Classes End -------------------- */
 
 /* -------------------- Header Styling Start -------------------- */
 .header {
   text-align: center;
-  margin: 4rem auto;
+  margin: 3rem auto 2rem auto;
   max-width: 500px;
 }
 .header h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--Very_Dark_Blue);
 }
 .header h1:nth-child(1) {
@@ -58,12 +58,85 @@ body {
 }
 /* -------------------- Header Styling End -------------------- */
 
+/* -------------------- Cards Styling Start -------------------- */
+.card_container {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card_container .box {
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 15px;
+  width: 350px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border-top: 3px solid;
+}
+.box h2 {
+  font-size: 1.2rem;
+  color: var(--Very_Dark_Blue);
+}
+.box p {
+  color: var(--Grayish_Blue);
+  font-size: 0.8rem;
+  margin: 0.8rem 0;
+}
+.box img {
+  display: block;
+  margin: 2.5rem 0 0 auto;
+}
+
+/* -------------------- Cards Styling End -------------------- */
+
 /* -------------------- Footer Styling Start -------------------- */
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin: 2rem auto;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 /* -------------------- Footer Styling End -------------------- */
+
+/* -------------------- Media Query Sratr -------------------- */
+@media (min-width: 1024px) {
+  .card_container .col-2 div:nth-child(1) {
+    margin-bottom: 30px;
+  }
+  .card_container .col-2 div:nth-child(2) {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card_container {
+    flex-direction: column;
+  }
+  .card_container .col-2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 425px) {
+  .header {
+    max-width: 300px !important;
+  }
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  .card_container .box {
+    width: 300px;
+  }
+  .card_container .col-2 div:nth-child(1) {
+    margin-bottom: 30px;
+  }
+  .card_container .col-2 div:nth-child(2) {
+    margin-top: 30px;
+  }
+}
+/* -------------------- Media Query End -------------------- */
